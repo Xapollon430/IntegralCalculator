@@ -39,7 +39,7 @@ const TrapFirst = (N, a, b) => {
 
   for (let i = a; i <= b; i += deltaX) {
     let value;
-    if (i === 0) {
+    if (i === a) {
       value = 4 / (Math.pow(i, 2) + 1);
     } else if (i === b) {
       value = 4 / (Math.pow(i, 2) + 1);
@@ -58,7 +58,7 @@ const leftSumSecond = (N, a, b) => {
   let totalSum = 0;
 
   for (let i = a; i < b; i += deltaX) {
-    let value = (4 / (Math.pow(i, 2) + 1)) * deltaX;
+    let value = Math.sin(Math.pow(i, 2)) * deltaX;
     totalSum = totalSum + value;
   }
   return totalSum;
@@ -68,7 +68,7 @@ const rightSumSecond = (N, a, b) => {
   let totalSum = 0;
 
   for (let i = deltaX; i <= b; i += deltaX) {
-    let value = (4 / (Math.pow(i, 2) + 1)) * deltaX;
+    let value = Math.sin(Math.pow(i, 2)) * deltaX;
     totalSum = totalSum + value;
   }
   return totalSum;
@@ -79,7 +79,7 @@ const midPointSecond = (N, a, b) => {
   let totalSum = 0;
 
   for (let i = deltaX / 2; i <= b; i += deltaX) {
-    let value = (4 / (Math.pow(i, 2) + 1)) * deltaX;
+    let value = Math.sin(Math.pow(i, 2)) * deltaX;
     totalSum = totalSum + value;
   }
   return totalSum;
@@ -90,12 +90,17 @@ const TrapSecond = (N, a, b) => {
   let totalSum = 0;
 
   for (let i = a; i <= b; i += deltaX) {
-    let Xi1 = 4 / (Math.pow(i, 2) + 1);
-    let Xi2 = 4 / (Math.pow(i + deltaX, 2) + 1);
-    let value = (Xi1 + Xi2) * (deltaX / 2);
+    let value;
+    if (i === a) {
+      value = Math.sin(Math.pow(i, 2));
+    } else if (i === b) {
+      value = Math.sin(Math.pow(i, 2));
+    } else {
+      value = 2 * Math.sin(Math.pow(i, 2));
+    }
     totalSum = totalSum + value;
   }
-  return totalSum;
+  return totalSum * (deltaX / 2);
 };
 
 // -------------------------------------------- THIRD FUNCTION ----------------------------------- //
@@ -105,7 +110,6 @@ const leftSumThird = (N, a, b) => {
   let totalSum = 0;
   for (let i = a; i < b; i += deltaX) {
     let value = 2 * Math.pow(Math.E, -Math.pow(i, 2)) * deltaX;
-    console.log(value);
     totalSum = totalSum + value;
   }
   return totalSum;
@@ -149,6 +153,7 @@ const TrapThird = (N, a, b) => {
   }
   return totalSum * (deltaX / 2);
 };
+
 export {
   leftSumFirst,
   rightSumFirst,

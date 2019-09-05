@@ -80,19 +80,19 @@ integralTwoCalculate.addEventListener("click", () => {
 
   switch (method) {
     case "Left Sum":
-      answer = leftSumSecond(rectangle, 0, 1);
+      answer = leftSumSecond(rectangle, 0, 1.57);
       break;
 
     case "Right Sum":
-      answer = rightSumSecond(rectangle, 0, 1);
+      answer = rightSumSecond(rectangle, 0, 1.57);
       break;
 
     case "Mid Point":
-      answer = midPointSecond(rectangle, 0, 1);
+      answer = midPointSecond(rectangle, 0, 1.57);
       break;
 
     case "Trapezoid":
-      answer = TrapSecond(rectangle, 0, 1);
+      answer = TrapSecond(rectangle, 0, 1.57);
   }
 
   if (answer) {
