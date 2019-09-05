@@ -1,0 +1,15 @@
+{
+  "name": "mathprojects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "integral.js",
+  "scripts": {
+    "dev": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {}
+}

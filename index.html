@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header><span>Integral Calculator</span></header>
+    <div class="content">
+      <div class="content-top">
+        Calculus II by Kumnit Nong
+      </div>
+      <div class="integralsContainer">
+        <div class="integralContainer">
+          <div class="integralWrap">
+            <span class="integralSign">&#8747;</span>
+            <span class="upperBound">1</span>
+            <span class="lowerBound">0</span>
+            <div class="integral">
+              <span class="upperIntegral">4</span>
+              <span>x^2</span>
+              <span>+</span>
+              <span>1</span>
+            </div>
+            <div class="divideSign"></div>
+            <div class="dx">dx</div>
+          </div>
+          <img src="./img/integral1.png" alt="integral graph" />
+          <div class="myButtons">
+            <label>Number of Rectangles</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleOne"
+                  type="radio"
+                  name="rectangleOne"
+                />
+                <label class="form-check-label">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleOne"
+                  type="radio"
+                  name="rectangleOne"
+                />
+                <label class="form-check-label">10</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleOne"
+                  type="radio"
+                  name="rectangleOne"
+                />
+                <label class="form-check-label">100</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleOne"
+                  type="radio"
+                  name="rectangleOne"
+                />
+                <label class="form-check-label">1000</label>
+              </div>
+            </div>
+            <label>Method to Solve</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input methodOne"
+                  type="radio"
+                  name="methodOne"
+                />
+                <label class="form-check-label">Left Sum</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input methodOne"
+                  type="radio"
+                  name="methodOne"
+                />
+                <label class="form-check-label">Right Sum</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input methodOne" type="radio"
+                name="methodOne" " />
+                <label class="form-check-label">Mid Point</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input methodOne"
+                  type="radio"
+                  name="methodOne"
+                />
+                <label class="form-check-label">Trapezoid</label>
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="integralOneCalculate"
+          >
+            Calculate
+          </button>
+          <input
+            class="form-control form-control-lg"
+            id="integralOneSolution"
+            type="text"
+          />
+        </div>
+
+        <div class="integralContainer">
+          <div class="integralWrap">
+            <span class="integralSign">&#8747;</span>
+            <span style="font-family:Times New Roman;" class="upperBound"
+              >&#928;/2</span
+            >
+            <span class="lowerBound">0</span>
+            <div style="top:55px;" class="integral">
+              <span>sin(x^2)dx</span>
+            </div>
+          </div>
+          <img src="./img/integral2.png" alt="integral graph" />
+          <div class="myButtons">
+            <label>Number of Rectangles</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleTwo"
+                  type="radio"
+                  name="rectangleTwo"
+                />
+                <label class="form-check-label">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleTwo"
+                  type="radio"
+                  name="rectangleTwo"
+                />
+                <label class="form-check-label">10</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleTwo"
+                  type="radio"
+                  name="rectangleTwo"
+                />
+                <label class="form-check-label">100</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleTwo"
+                  type="radio"
+                  name="rectangleTwo"
+                />
+                <label class="form-check-label">1000</label>
+              </div>
+            </div>
+            <label>Method to Solve</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input methodTwo"
+                  type="radio"
+                  name="methodTwo"
+                />
+                <label class="form-check-label">Left Sum</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input methodTwo"
+                  type="radio"
+                  name="methodTwo"
+                />
+                <label class="form-check-label">Right Sum</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input methodTwo" type="radio"
+                name="methodTwo" " />
+                <label class="form-check-label">Mid Point</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input methodTwo"
+                  type="radio"
+                  name="methodTwo"
+                />
+                <label class="form-check-label">Trapezoid</label>
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="integralTwoCalculate"
+          >
+            Calculate
+          </button>
+          <input
+            class="form-control form-control-lg"
+            id="integralTwoSolution"
+            type="text"
+          />
+        </div>
+
+        <div class="integralContainer">
+          <div class="integralWrap">
+            <span class="integralSign">&#8747;</span>
+            <span style="font-family:Times New Roman;" class="upperBound"
+              >2</span
+            >
+            <span class="lowerBound">1</span>
+            <div style="top:55px;display: inline;" class="integral">
+              <span>2e^-x^2dx</span>
+            </div>
+          </div>
+          <img src="./img/integral3.png" alt="integral graph" />
+          <div class="myButtons">
+            <label>Number of Rectangles</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleThree"
+                  type="radio"
+                  name="rectangleThree"
+                />
+                <label class="form-check-label">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleThree"
+                  type="radio"
+                  name="rectangleThree"
+                />
+                <label class="form-check-label">10</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleThree"
+                  type="radio"
+                  name="rectangleThree"
+                />
+                <label class="form-check-label">100</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input rectangleThree"
+                  type="radio"
+                  name="rectangleThree"
+                />
+                <label class="form-check-label">1000</label>
+              </div>
+            </div>
+            <label>Method to Solve</label>
+            <div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input methodThree"
+                  type="radio"
+                  name=" methodThree"
+                />
+                <label class="form-check-label">Left Sum</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input  methodThree"
+                  type="radio"
+                  name=" methodThree"
+                />
+                <label class="form-check-label">Right Sum</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input  methodThree"
+                  type="radio"
+                  name=" methodThree"
+                />
+                <label class="form-check-label">Mid Point</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input  methodThree"
+                  type="radio"
+                  name=" methodThree"
+                />
+                <label class="form-check-label">Trapezoid</label>
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="integralThreeCalculate"
+          >
+            Calculate
+          </button>
+          <input
+            class="form-control form-control-lg"
+            id="integralThreeSolution"
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./client.js"></script>
+  </body>
+</html>
