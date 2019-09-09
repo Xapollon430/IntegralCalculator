@@ -18,7 +18,6 @@ const rightSumFirst = (N, a, b) => {
     let value = 4 / (Math.pow(i, 2) + 1);
     totalSum = totalSum + value;
   }
-  totalSum += 4 / (Math.pow(1, 2) + 1);
 
   return totalSum * deltaX;
 };
