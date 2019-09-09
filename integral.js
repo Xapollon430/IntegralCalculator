@@ -205,3 +205,4 @@ export {
   midPointThird,
   TrapThird
 };
+console.log(123);
